@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Lokasi Riwayat Pendidikan</title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+ 
+ <style>
+    html, body, section
+    {
+        position: relative;
+        height: 100%;
+        background-color: #b0ddf0;
+    }
+
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+    #map {
+    width: 1300px;
+    height: 800px;
+    margin-top: 80px;
+    } 
+ </style>
+
+</head>
+
+<body>
+    <center>
+        <div id="map"></div>
+    </center>
+
+     <script>
+        var map = L.map('map',{
+        center: [-7.765775, 110.378470],
+        zoom: 14
+        });
+
+        L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20, 
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+             .addTo(map);
+        
+        L.marker([-7.7530516771024, 110.37538265402989])
+            .bindPopup('<center><img src="https://lh5.googleusercontent.com/p/AF1QipOckQI6FG4sveZ0dHUAT70fgB62APilHQ78IVzj=w426-h240-k-no" width="150px" height="100px" title="TK Bina Taruna" alt="TK Bina Taruna"></center><h1>TK Bina Taruna</h1>')
+            .addTo(map)
+        L.marker([-7.759290502920634, 110.37427514868345])
+            .bindPopup('<center><img src="https://lh5.googleusercontent.com/p/AF1QipPC-OgFQC146q-jwsCuucPLmc0kMymB_svM2tIG=w426-h240-k-no" width="150px" height="100px" title="SDN Sinduadi Timur" alt="SDN Sinduadi Timur"></center><h1>SDN Sinduadi Timur</h1>')
+            .addTo(map)
+        L.marker([-7.777286519484086, 110.37546552519501])
+            .bindPopup('<center><img src="https://lh5.googleusercontent.com/p/AF1QipMAbY04xb7ujmZuf-uaQTfxq5TdL5bYBQW3t2kj=w408-h299-k-no" width="150px" height="100px title="SMPN 1 Yogyakarta" alt="SMPN 1 Yogyakarta"></center><h1>SMPN 1 Yogyakarta</h1>')
+            .addTo(map)
+        L.marker([-7.786304363992973, 110.37358370985454])
+            .bindPopup('<center><img src="https://lh5.googleusercontent.com/p/AF1QipOfENQRIJy8TSreZGLVGXsTggAsELYNIM97XRK7=w408-h306-k-no" width="150px" height="100px title="SMAN 3 Yogyakarta" alt="SMAN 3 Yogyakarta"></center><h1>SMAN 3 Yogyakarta</h1>')
+            .addTo(map)
+        L.marker([-7.764056696860265, 110.37264846441755])
+            .bindPopup('<center><img src="https://lh5.googleusercontent.com/p/AF1QipOV88KWKbOLPQtohfi2O_MY1PivKyX2geQ4GD2c=w520-h240-k-no" width="150px" height="100px title="Teknik Geodesi UGM" alt="Teknik Geodesi UGM"></center><h1>Teknik Geodesi UGM</h1>')
+            .addTo(map)
+    </script>
+
+
+</body>
+</html>
